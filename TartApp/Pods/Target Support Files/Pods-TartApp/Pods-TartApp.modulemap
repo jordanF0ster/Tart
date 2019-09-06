@@ -1,0 +1,6 @@
+framework module Pods_TartApp {
+  umbrella header "Pods-TartApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,387 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pr",
+				"print"
+			],
+			[
+				"fi",
+				"file_name"
+			],
+			[
+				"ob",
+				"objects"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"dic",
+				"dictionary"
+			],
+			[
+				"obje",
+				"objects"
+			],
+			[
+				"pri",
+				"print"
+			],
+			[
+				"loca",
+				"localize_objects"
+			],
+			[
+				"image",
+				"image_name"
+			],
+			[
+				"file",
+				"file_name\tstatement"
+			],
+			[
+				"url",
+				"urllib\tmodule"
+			],
+			[
+				"ite",
+				"itemReplace"
+			],
+			[
+				"getE",
+				"getElementsByClassName"
+			],
+			[
+				"gete",
+				"getElementsByClassName"
+			],
+			[
+				"get",
+				"getElementsByClassName"
+			],
+			[
+				"item",
+				"itemPrice"
+			],
+			[
+				"conver",
+				"convertSpanToUnit"
+			],
+			[
+				"chan",
+				"changeSamePrices"
+			],
+			[
+				"chn",
+				"changeSamePrices"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"const",
+				"constPriceArr"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"t",
+				"toString"
+			],
+			[
+				"replac",
+				"replace"
+			],
+			[
+				"replace",
+				"replaceComma"
+			],
+			[
+				"priceva",
+				"priceValBuyBox"
+			],
+			[
+				"pric",
+				"priceVal"
+			],
+			[
+				"price",
+				"priceWhole"
+			],
+			[
+				"node",
+				"node2"
+			],
+			[
+				"data",
+				"data_test"
+			],
+			[
+				"data_",
+				"data_train"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Detect.py",
+			"settings":
+			{
+				"buffer_size": 2262,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jfoster/Documents/fpvcFinalProject/detectImage.sublime-project",
+		"/Users/jfoster/Library/Application Support/Sublime Text 3/Packages/User/newPython3.sublime-build",
+		"/Users/jfoster/Documents/Tart/Detect.py",
+		"/Users/jfoster/Downloads/fpvctextart-firebase-adminsdk-0atex-bfd059a27d.json",
+		"/Users/jfoster/Documents/fpvcFinalProject/detect.java",
+		"/Users/jfoster/Documents/imageScrape.py",
+		"/Users/jfoster/Downloads/776.json",
+		"/Users/jfoster/cmsc132/proj3/tests/Project3SecretTests.java",
+		"/Users/jfoster/Downloads/Artworks.json",
+		"/Users/jfoster/Documents/GitHub/Bitcamp-2019/background.js",
+		"/Users/jfoster/Documents/GitHub/Bitcamp-2019/content.js",
+		"/Users/jfoster/Documents/GitHub/Bitcamp-2019/manifest.json",
+		"/Users/jfoster/Downloads/tandf_uacn2019_165S.bib",
+		"/Library/Frameworks/iTunesLibrary.framework/Versions/A/Headers/ITLibMediaItem.h",
+		"/Users/jfoster/Desktop/yHacks2018-master/yHacks2018-master/yHackGUI/src/application/Main.java",
+		"/Users/jfoster/Desktop/yHacks2018-master/yHacks2018-master/yHackGUI/src/application/Controller.java",
+		"/Users/jfoster/Desktop/yHacks2018-master/yHacks2018-master/yHackGUI/src/application/application.css",
+		"/Users/jfoster/Desktop/ml2.py",
+		"/Users/jfoster/Desktop/ml1.py",
+		"/Users/jfoster/Desktop/test1.py",
+		"/Users/jfoster/Desktop/test.py"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Detect.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 201.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/newPython3.sublime-build",
+	"project": "DetectFromImage.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/GitHub/Bitcamp-2019/manifest.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 398.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"build_systems":
+	[
+		{
+			"name": "PYTHON_VENV",
+			"shell_cmd": "mypython/bin/python hello.py"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"/Users/jfoster/Documents/fpvcFinalProject/env\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"python_interpreter": "/Users/jfoster/Documents/fpvcFinalProject/env"
+	},
+	"virtualenv": "mypython"
+}

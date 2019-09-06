@@ -1,0 +1,6 @@
+framework module Pods_TartAppUITests {
+  umbrella header "Pods-TartAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
