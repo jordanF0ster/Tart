@@ -4,9 +4,11 @@ from google.cloud import vision
 import pandas as pd
 import os.path
 
-# import firebase_admin
-# from firebase_admin import credentials
-# from firebase_admin import db
+import json,http.client
+
+
+connection = http.client.HTTPSConnection('tartapp.herokuapp.com', 443)
+connection.connect()
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r"fpvcImageLabelDetection-f35066ad156f.json"
 
@@ -36,6 +38,7 @@ def print_labels_in_image(number_images, dictionary):
 	current_image = 1;
 
 	for i in range(number_images):
+
 		if (current_image < 10):
 			image_name = '000{}w.jpg'.format(current_image)
 		elif (current_image < 100):
@@ -75,6 +78,26 @@ def print_labels_in_image(number_images, dictionary):
 					
 		print(picture_contents)
 		current_image += 1
+
+		image_labels = picture_contents['labels']
+		image_objects = picture_contents['objects']
+
+		# connection.request('POST', '/parse/classes/Paintings', json.dumps({
+	 #       "image": file_name,
+	 #       "objects": image_objects,
+	 #       "labels": image_labels
+	 #     }), {
+	 #       "X-Parse-Application-Id": "myAppId",
+	 #       "X-Parse-REST-API-Key": "${REST_API_KEY}",
+	 #       "Content-Type": "application/json"
+	 #     })
+		connection.request('POST', '/parse/files/pic.jpg', open(image_path, 'rb').read(), {
+			"X-Parse-Application-Id": "myAppId",
+			"X-Parse-REST-API-Key": "${REST_API_KEY}",
+			"Content-Type": "image/jpeg"
+		})
+		print(image_path)
+		connection.close()
 
 
 def print_object_labels_dict(): 
