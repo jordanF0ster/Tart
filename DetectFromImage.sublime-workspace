@@ -140,6 +140,26 @@
 			"settings":
 			{
 				"buffer_size": 2262,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jfoster/Library/Application Support/Sublime Text 3/Packages/User/tartPython.sublime-build",
+			"settings":
+			{
+				"buffer_size": 187,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "untitled.sublime-build"
+			}
+		},
+		{
+			"file": "DetectFromImage.sublime-project",
+			"settings":
+			{
+				"buffer_size": 234,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -276,8 +296,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								2097,
+								2097
 							]
 						],
 						"settings":
@@ -285,10 +305,66 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 789.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/jfoster/Library/Application Support/Sublime Text 3/Packages/User/tartPython.sublime-build",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "DetectFromImage.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								203,
+								203
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -333,7 +409,7 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "Packages/User/newPython3.sublime-build",
+	"pinned_build_system": "Packages/User/tartPython.sublime-build",
 	"project": "DetectFromImage.sublime-project",
 	"replace":
 	{
