@@ -82,21 +82,34 @@ def print_labels_in_image(number_images, dictionary):
 		image_labels = picture_contents['labels']
 		image_objects = picture_contents['objects']
 
-		# connection.request('POST', '/parse/classes/Paintings', json.dumps({
-	 #       "image": file_name,
-	 #       "objects": image_objects,
-	 #       "labels": image_labels
-	 #     }), {
-	 #       "X-Parse-Application-Id": "myAppId",
-	 #       "X-Parse-REST-API-Key": "${REST_API_KEY}",
-	 #       "Content-Type": "application/json"
-	 #     })
 		connection.request('POST', '/parse/files/pic.jpg', open(image_path, 'rb').read(), {
 			"X-Parse-Application-Id": "myAppId",
 			"X-Parse-REST-API-Key": "${REST_API_KEY}",
 			"Content-Type": "image/jpeg"
 		})
-		print(image_path)
+		result = json.loads(connection.getresponse().read())
+		print(result)
+
+		connection.close()
+
+		connection.connect()
+
+		connection.request('POST', '/parse/classes/Paintings', json.dumps({
+	       # "image": file_name,
+	       "objects": image_objects,
+	       "labels": image_labels,
+	       "image": file_name,
+	       "picture": {
+         		"name": "{}".format(result["name"]),
+         		"url:": "{}".format(result["url"]),
+         		"__type": "File"
+       		}
+	     }), {
+	       "X-Parse-Application-Id": "myAppId",
+	       "X-Parse-REST-API-Key": "${REST_API_KEY}",
+	       "Content-Type": "application/json"
+	     })
+
 		connection.close()
 
 
