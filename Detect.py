@@ -28,7 +28,7 @@ def localize_objects(path, dictionary):
     objects = client.object_localization(
         image=image).localized_object_annotations
 
-    print('Number of objects found: {}'.format(len(objects)))
+    # print('Number of objects found: {}'.format(len(objects)))
     for object_ in objects:
         if (not object_.name in dictionary['objects']):
         	dictionary['objects'].append(object_.name)
@@ -37,7 +37,7 @@ def print_labels_in_image(number_images, dictionary):
 
 	current_image = 1;
 
-	for i in range(number_images):
+	for i in range(1, number_images):
 
 		if (current_image < 10):
 			image_name = '000{}w.jpg'.format(current_image)
@@ -59,9 +59,9 @@ def print_labels_in_image(number_images, dictionary):
 			'labels': []
 		}
 
-		localize_objects(image_path, picture_contents)
+		if (os.path.isfile(image_path)):
+			localize_objects(image_path, picture_contents)
 
-		if (os.path.exists(image_path)):
 			with io.open(image_path, 'rb') as image_file:
 			    content = image_file.read()
 
@@ -76,41 +76,42 @@ def print_labels_in_image(number_images, dictionary):
 				if (not label.description in picture_contents['labels']):
 					picture_contents['labels'].append(label.description)
 					
-		print(picture_contents)
+		# print(picture_contents)
 		current_image += 1
 
 		image_labels = picture_contents['labels']
 		image_objects = picture_contents['objects']
 
-		connection.request('POST', '/parse/files/pic.jpg', open(image_path, 'rb').read(), {
-			"X-Parse-Application-Id": "myAppId",
-			"X-Parse-REST-API-Key": "${REST_API_KEY}",
-			"Content-Type": "image/jpeg"
-		})
-		result = json.loads(connection.getresponse().read())
-		print(result)
+		if (os.path.isfile(image_path)):
+			connection.request('POST', '/parse/files/pic.jpg', open(image_path, 'rb').read(), {
+				"X-Parse-Application-Id": "myAppId",
+				"X-Parse-REST-API-Key": "${REST_API_KEY}",
+				"Content-Type": "image/jpeg"
+			})
+			result = json.loads(connection.getresponse().read())
+			# print(result)
 
-		connection.close()
+			connection.close()
 
-		connection.connect()
+			connection.connect()
 
-		connection.request('POST', '/parse/classes/Paintings', json.dumps({
-	       # "image": file_name,
-	       "objects": image_objects,
-	       "labels": image_labels,
-	       "image": file_name,
-	       "picture": {
-         		"name": "{}".format(result["name"]),
-         		"url:": "{}".format(result["url"]),
-         		"__type": "File"
-       		}
-	     }), {
-	       "X-Parse-Application-Id": "myAppId",
-	       "X-Parse-REST-API-Key": "${REST_API_KEY}",
-	       "Content-Type": "application/json"
-	     })
+			connection.request('POST', '/parse/classes/Paintings', json.dumps({
+		       # "image": file_name,
+		       "objects": image_objects,
+		       "labels": image_labels,
+		       "image": file_name,
+		       "picture": {
+	         		"name": "{}".format(result["name"]),
+	         		"url:": "{}".format(result["url"]),
+	         		"__type": "File"
+	       		}
+		     }), {
+		       "X-Parse-Application-Id": "myAppId",
+		       "X-Parse-REST-API-Key": "${REST_API_KEY}",
+		       "Content-Type": "application/json"
+		     })
 
-		connection.close()
+			connection.close()
 
 
 def print_object_labels_dict(): 
@@ -119,7 +120,7 @@ def print_object_labels_dict():
 		'labels': []
 	}
 
-	print_labels_in_image(3, picture_contents)
+	print_labels_in_image(1000, picture_contents)
 
 print_object_labels_dict()
 
