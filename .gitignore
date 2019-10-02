@@ -100,3 +100,14 @@ fpvctextart-firebase-adminsdk-0atex-bfd059a27d.json
 
 #pip requirements
 requirements.txt
+
+#google info.plist
+GoogleService-Info.plist
+
+TartApp/Pods/Target Support Files/GoogleMobileVision/ResourceBundle-GoogleMVFaceDetectorResources-GoogleMobileVision-Info.plist
+
+#pods
+TartApp/Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/FirebaseMLVisionObjectDetection
+	TartApp/Pods/GoogleMobileVision/FaceDetector/Frameworks/
+	TartApp/Pods/GoogleMobileVision/LabelDetector/
+	TartApp/Pods/GoogleMobileVision/TextDetector/Frameworks/
