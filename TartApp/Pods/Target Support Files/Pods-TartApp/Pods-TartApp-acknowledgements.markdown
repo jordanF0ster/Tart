@@ -1920,6 +1920,26 @@ Copyright 2019 Google
 
 Copyright 2019 Google
 
+## FirebaseMLVisionAutoML
+
+Copyright 2019 Google
+
+## FirebaseMLVisionBarcodeModel
+
+Copyright 2019 Google
+
+## FirebaseMLVisionFaceModel
+
+Copyright 2019 Google
+
+## FirebaseMLVisionLabelModel
+
+Copyright 2019 Google
+
+## FirebaseMLVisionObjectDetection
+
+Copyright 2019 Google
+
 ## FirebaseMLVisionTextModel
 
 Copyright 2019 Google
@@ -3409,6 +3429,10 @@ of the input file used when generating it.  This code is not
 standalone and requires a support library to be linked with it.  This
 support library is itself covered by the above license.
 
+
+## TensorFlowLite
+
+Apache 2
 
 ## gRPC-C++
 
