@@ -108,6 +108,10 @@ TartApp/Pods/Target Support Files/GoogleMobileVision/ResourceBundle-GoogleMVFace
 
 #pods
 TartApp/Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/FirebaseMLVisionObjectDetection
-	TartApp/Pods/GoogleMobileVision/FaceDetector/Frameworks/
-	TartApp/Pods/GoogleMobileVision/LabelDetector/
-	TartApp/Pods/GoogleMobileVision/TextDetector/Frameworks/
+TartApp/Pods/GoogleMobileVision/FaceDetector/Frameworks/
+TartApp/Pods/GoogleMobileVision/LabelDetector/
+TartApp/Pods/GoogleMobileVision/TextDetector/Frameworks/
+
+TartApp/Pods/GoogleMobileVision/FaceDetector/Frameworks/
+TartApp/Pods/GoogleMobileVision/LabelDetector/
+artApp/Pods/GoogleMobileVision/TextDetector/Frameworks/
