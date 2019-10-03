@@ -12,6 +12,13 @@
 		E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56ED7342331B0DC0071D4DD /* HomeViewController.m */; };
 		E56ED7372331B3520071D4DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56ED7362331B3520071D4DD /* GoogleService-Info.plist */; };
 		E59681D52322FF1400FDAED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59681D42322FF1400FDAED5 /* AppDelegate.m */; };
+		E56B87282344FCC80020A56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56B871F2344FCC80020A56E /* GoogleService-Info.plist */; };
+		E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56ED7342331B0DC0071D4DD /* HomeViewController.m */; };
+		E59346B12344FE2F006F350B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346A82344FE2E006F350B /* ViewController.m */; };
+		E59346B22344FE2F006F350B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346AA2344FE2E006F350B /* AppDelegate.m */; };
+		E59346B32344FE2F006F350B /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346AD2344FE2E006F350B /* CameraViewController.m */; };
+		E59346B42344FE2F006F350B /* UIImage+VisionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346AF2344FE2F006F350B /* UIImage+VisionDetection.m */; };
+		E59346B52344FE2F006F350B /* UIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346B02344FE2F006F350B /* UIUtilities.m */; };
 		E59681DB2322FF1400FDAED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59681D92322FF1400FDAED5 /* Main.storyboard */; };
 		E59681DD2322FF1500FDAED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59681DC2322FF1500FDAED5 /* Assets.xcassets */; };
 		E59681E02322FF1500FDAED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59681DE2322FF1500FDAED5 /* LaunchScreen.storyboard */; };
@@ -52,6 +59,20 @@
 		E59681D02322FF1400FDAED5 /* TartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59681D32322FF1400FDAED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E59681D42322FF1400FDAED5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E56B871F2344FCC80020A56E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E56ED7332331B0DC0071D4DD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E56ED7342331B0DC0071D4DD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E59346A72344FE2E006F350B /* UIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUtilities.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/UIUtilities.h"; sourceTree = "<group>"; };
+		E59346A82344FE2E006F350B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/ViewController.m"; sourceTree = "<group>"; };
+		E59346A92344FE2E006F350B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.h"; sourceTree = "<group>"; };
+		E59346AA2344FE2E006F350B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.m"; sourceTree = "<group>"; };
+		E59346AB2344FE2E006F350B /* UIImage+VisionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+VisionDetection.h"; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/UIImage+VisionDetection.h"; sourceTree = "<group>"; };
+		E59346AC2344FE2E006F350B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/ViewController.h"; sourceTree = "<group>"; };
+		E59346AD2344FE2E006F350B /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/CameraViewController.m"; sourceTree = "<group>"; };
+		E59346AE2344FE2F006F350B /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/CameraViewController.h"; sourceTree = "<group>"; };
+		E59346AF2344FE2F006F350B /* UIImage+VisionDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+VisionDetection.m"; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/UIImage+VisionDetection.m"; sourceTree = "<group>"; };
+		E59346B02344FE2F006F350B /* UIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUtilities.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/UIUtilities.m"; sourceTree = "<group>"; };
+		E59681D02322FF1400FDAED5 /* TartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59681DA2322FF1400FDAED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E59681DC2322FF1500FDAED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E59681DF2322FF1500FDAED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,6 +171,17 @@
 				E59681DC2322FF1500FDAED5 /* Assets.xcassets */,
 				E59681DE2322FF1500FDAED5 /* LaunchScreen.storyboard */,
 				E59681E12322FF1500FDAED5 /* Info.plist */,
+				E56B871F2344FCC80020A56E /* GoogleService-Info.plist */,
+				E59346A92344FE2E006F350B /* AppDelegate.h */,
+				E59346AA2344FE2E006F350B /* AppDelegate.m */,
+				E59346AE2344FE2F006F350B /* CameraViewController.h */,
+				E59346AD2344FE2E006F350B /* CameraViewController.m */,
+				E59346AB2344FE2E006F350B /* UIImage+VisionDetection.h */,
+				E59346AF2344FE2F006F350B /* UIImage+VisionDetection.m */,
+				E59346A72344FE2E006F350B /* UIUtilities.h */,
+				E59346B02344FE2F006F350B /* UIUtilities.m */,
+				E59346AC2344FE2E006F350B /* ViewController.h */,
+				E59346A82344FE2E006F350B /* ViewController.m */,
 				E59681E22322FF1500FDAED5 /* main.m */,
 			);
 			path = TartApp;
@@ -293,6 +325,7 @@
 			files = (
 				E59681E02322FF1500FDAED5 /* LaunchScreen.storyboard in Resources */,
 				E56ED7372331B3520071D4DD /* GoogleService-Info.plist in Resources */,
+				E56B87282344FCC80020A56E /* GoogleService-Info.plist in Resources */,
 				E59681DD2322FF1500FDAED5 /* Assets.xcassets in Resources */,
 				E59681DB2322FF1400FDAED5 /* Main.storyboard in Resources */,
 			);
@@ -425,6 +458,12 @@
 				E59681E32322FF1500FDAED5 /* main.m in Sources */,
 				E59681D52322FF1400FDAED5 /* AppDelegate.m in Sources */,
 				E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */,
+				E59346B52344FE2F006F350B /* UIUtilities.m in Sources */,
+				E59346B12344FE2F006F350B /* ViewController.m in Sources */,
+				E59346B32344FE2F006F350B /* CameraViewController.m in Sources */,
+				E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */,
+				E59346B42344FE2F006F350B /* UIImage+VisionDetection.m in Sources */,
+				E59346B22344FE2F006F350B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jordan.TartApp;
+				PRODUCT_BUNDLE_IDENTIFIER = TartApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -621,7 +660,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jordan.TartApp;
+				PRODUCT_BUNDLE_IDENTIFIER = TartApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
