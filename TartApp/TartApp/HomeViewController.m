@@ -1,20 +1,4 @@
-//
-//  Copyright (c) 2018 Google Inc.
-//
-//  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
-//
-//  http://www.apache.org/licenses/LICENSE-2.0
-//
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//  See the License for the specific language governing permissions and
-//  limitations under the License.
-//
-
-#import "ViewController.h"
+#import "HomeViewController.h"
 #import "UIImage+VisionDetection.h"
 #import "UIUtilities.h"
 
@@ -58,6 +42,9 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
 /** A string holding current results from detection. */
 @property(nonatomic) NSMutableString *resultsText;
 
+/** An array holding current results from detection */
+@property(nonatomic) NSMutableArray *resultsArray;
+
 /** An overlay view that displays detection annotations. */
 @property(nonatomic) UIView *annotationOverlayView;
 
@@ -93,6 +80,8 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     
     self.imagePicker = [UIImagePickerController new];
     self.resultsText = [NSMutableString new];
+    self.resultsArray = [NSMutableArray new];
+    
     _currentImage = 0;
     _annotationOverlayView = [[UIView alloc] initWithFrame:CGRectZero];
     _annotationOverlayView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -175,7 +164,9 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     resultsAlertController.popoverPresentationController.sourceView = self.view;
     
     [self presentViewController:resultsAlertController animated:YES completion:nil];
-    NSLog(@"%@", _resultsText);
+    for (NSString *text in self.resultsArray) {
+        NSLog(@"%@\n", text);
+    }
 }
 
 /// Updates the image view with a scaled version of the given image.
@@ -276,6 +267,7 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
             }
         }
         [self.resultsText appendFormat:@"%@\n", text.text];
+        [self.resultsArray addObject:text.text];
         [self showResults];
         // [END_EXCLUDE]
     }];
