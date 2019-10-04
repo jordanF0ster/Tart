@@ -11,7 +11,7 @@
 		3F0895CEF0A11F371495EB1C /* Pods_TartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BFF802759054C3D3A22056 /* Pods_TartApp.framework */; };
 		E555C2632345757900672C1E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25C2345757900672C1E /* CameraViewController.m */; };
 		E555C2642345757900672C1E /* UIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25E2345757900672C1E /* UIUtilities.m */; };
-		E555C2652345757900672C1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25F2345757900672C1E /* ViewController.m */; };
+		E555C2652345757900672C1E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25F2345757900672C1E /* HomeViewController.m */; };
 		E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C2622345757900672C1E /* UIImage+VisionDetection.m */; };
 		E56B87282344FCC80020A56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56B871F2344FCC80020A56E /* GoogleService-Info.plist */; };
 		E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56ED7342331B0DC0071D4DD /* HomeViewController.m */; };
@@ -50,11 +50,11 @@
 		64B50CECD036C4E00628DCBD /* Pods_TartAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D47B48A1A23A8317041D4 /* Pods-TartApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartApp.release.xcconfig"; path = "Target Support Files/Pods-TartApp/Pods-TartApp.release.xcconfig"; sourceTree = "<group>"; };
 		DFAD9B4E8B4FDA6C3A630217 /* Pods-TartAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E555C25B2345757900672C1E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E555C25B2345757900672C1E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E555C25C2345757900672C1E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		E555C25D2345757900672C1E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		E555C25E2345757900672C1E /* UIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtilities.m; sourceTree = "<group>"; };
-		E555C25F2345757900672C1E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E555C25F2345757900672C1E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E555C2602345757900672C1E /* UIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtilities.h; sourceTree = "<group>"; };
 		E555C2612345757900672C1E /* UIImage+VisionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VisionDetection.h"; sourceTree = "<group>"; };
 		E555C2622345757900672C1E /* UIImage+VisionDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VisionDetection.m"; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 				E555C2622345757900672C1E /* UIImage+VisionDetection.m */,
 				E555C2602345757900672C1E /* UIUtilities.h */,
 				E555C25E2345757900672C1E /* UIUtilities.m */,
-				E555C25B2345757900672C1E /* ViewController.h */,
-				E555C25F2345757900672C1E /* ViewController.m */,
+				E555C25B2345757900672C1E /* HomeViewController.h */,
+				E555C25F2345757900672C1E /* HomeViewController.m */,
 			);
 			path = TartApp;
 			sourceTree = "<group>";
@@ -442,7 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E555C2652345757900672C1E /* ViewController.m in Sources */,
+				E555C2652345757900672C1E /* HomeViewController.m in Sources */,
 				E59681E32322FF1500FDAED5 /* main.m in Sources */,
 				E555C2642345757900672C1E /* UIUtilities.m in Sources */,
 				E555C2632345757900672C1E /* CameraViewController.m in Sources */,
