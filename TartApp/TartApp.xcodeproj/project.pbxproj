@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		312D8FC95B17257718677D7C /* Pods_TartAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682699A4B64B60659CB4637 /* Pods_TartAppTests.framework */; };
 		3F0895CEF0A11F371495EB1C /* Pods_TartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BFF802759054C3D3A22056 /* Pods_TartApp.framework */; };
+		E542C17A23479D9800FB612E /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17923479D9800FB612E /* Painting.m */; };
+		E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17C23479FB800FB612E /* PaintingViewController.m */; };
+		E542C1802347A6A000FB612E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17F2347A6A000FB612E /* HomeViewController.m */; };
 		E555C2632345757900672C1E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25C2345757900672C1E /* CameraViewController.m */; };
 		E555C2642345757900672C1E /* UIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25E2345757900672C1E /* UIUtilities.m */; };
-		E555C2652345757900672C1E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25F2345757900672C1E /* HomeViewController.m */; };
 		E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C2622345757900672C1E /* UIImage+VisionDetection.m */; };
 		E56B87282344FCC80020A56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56B871F2344FCC80020A56E /* GoogleService-Info.plist */; };
-		E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56ED7342331B0DC0071D4DD /* HomeViewController.m */; };
 		E59346B22344FE2F006F350B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346AA2344FE2E006F350B /* AppDelegate.m */; };
 		E59681DB2322FF1400FDAED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59681D92322FF1400FDAED5 /* Main.storyboard */; };
 		E59681DD2322FF1500FDAED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59681DC2322FF1500FDAED5 /* Assets.xcassets */; };
@@ -50,17 +51,19 @@
 		64B50CECD036C4E00628DCBD /* Pods_TartAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D47B48A1A23A8317041D4 /* Pods-TartApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartApp.release.xcconfig"; path = "Target Support Files/Pods-TartApp/Pods-TartApp.release.xcconfig"; sourceTree = "<group>"; };
 		DFAD9B4E8B4FDA6C3A630217 /* Pods-TartAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E555C25B2345757900672C1E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E542C17823479D9800FB612E /* Painting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Painting.h; sourceTree = "<group>"; };
+		E542C17923479D9800FB612E /* Painting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Painting.m; sourceTree = "<group>"; };
+		E542C17B23479FB800FB612E /* PaintingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintingViewController.h; sourceTree = "<group>"; };
+		E542C17C23479FB800FB612E /* PaintingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintingViewController.m; sourceTree = "<group>"; };
+		E542C17E2347A6A000FB612E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E542C17F2347A6A000FB612E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E555C25C2345757900672C1E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		E555C25D2345757900672C1E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		E555C25E2345757900672C1E /* UIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtilities.m; sourceTree = "<group>"; };
-		E555C25F2345757900672C1E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E555C2602345757900672C1E /* UIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtilities.h; sourceTree = "<group>"; };
 		E555C2612345757900672C1E /* UIImage+VisionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VisionDetection.h"; sourceTree = "<group>"; };
 		E555C2622345757900672C1E /* UIImage+VisionDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VisionDetection.m"; sourceTree = "<group>"; };
 		E56B871F2344FCC80020A56E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E56ED7332331B0DC0071D4DD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		E56ED7342331B0DC0071D4DD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E59346A92344FE2E006F350B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.h"; sourceTree = "<group>"; };
 		E59346AA2344FE2E006F350B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.m"; sourceTree = "<group>"; };
 		E59681D02322FF1400FDAED5 /* TartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,11 +123,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E542C17723479D1300FB612E /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				E555C2602345757900672C1E /* UIUtilities.h */,
+				E555C25E2345757900672C1E /* UIUtilities.m */,
+				E542C17823479D9800FB612E /* Painting.h */,
+				E542C17923479D9800FB612E /* Painting.m */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
 		E56ED72F2331AF610071D4DD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E56ED7332331B0DC0071D4DD /* HomeViewController.h */,
-				E56ED7342331B0DC0071D4DD /* HomeViewController.m */,
+				E555C25D2345757900672C1E /* CameraViewController.h */,
+				E555C25C2345757900672C1E /* CameraViewController.m */,
+				E542C17B23479FB800FB612E /* PaintingViewController.h */,
+				E542C17C23479FB800FB612E /* PaintingViewController.m */,
+				E542C17E2347A6A000FB612E /* HomeViewController.h */,
+				E542C17F2347A6A000FB612E /* HomeViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 		E59681D22322FF1400FDAED5 /* TartApp */ = {
 			isa = PBXGroup;
 			children = (
+				E542C17723479D1300FB612E /* Subclasses */,
 				E56ED72F2331AF610071D4DD /* ViewControllers */,
 				E59681D92322FF1400FDAED5 /* Main.storyboard */,
 				E59681DC2322FF1500FDAED5 /* Assets.xcassets */,
@@ -163,14 +182,8 @@
 				E59346A92344FE2E006F350B /* AppDelegate.h */,
 				E59346AA2344FE2E006F350B /* AppDelegate.m */,
 				E59681E22322FF1500FDAED5 /* main.m */,
-				E555C25D2345757900672C1E /* CameraViewController.h */,
-				E555C25C2345757900672C1E /* CameraViewController.m */,
 				E555C2612345757900672C1E /* UIImage+VisionDetection.h */,
 				E555C2622345757900672C1E /* UIImage+VisionDetection.m */,
-				E555C2602345757900672C1E /* UIUtilities.h */,
-				E555C25E2345757900672C1E /* UIUtilities.m */,
-				E555C25B2345757900672C1E /* HomeViewController.h */,
-				E555C25F2345757900672C1E /* HomeViewController.m */,
 			);
 			path = TartApp;
 			sourceTree = "<group>";
@@ -442,11 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E555C2652345757900672C1E /* HomeViewController.m in Sources */,
 				E59681E32322FF1500FDAED5 /* main.m in Sources */,
+				E542C17A23479D9800FB612E /* Painting.m in Sources */,
 				E555C2642345757900672C1E /* UIUtilities.m in Sources */,
+				E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */,
+				E542C1802347A6A000FB612E /* HomeViewController.m in Sources */,
 				E555C2632345757900672C1E /* CameraViewController.m in Sources */,
-				E56ED7352331B0DC0071D4DD /* HomeViewController.m in Sources */,
 				E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */,
 				E59346B22344FE2F006F350B /* AppDelegate.m in Sources */,
 			);
