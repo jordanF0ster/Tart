@@ -1,4 +1,5 @@
 PODS:
+  - Bolts/Tasks (1.9.0)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -204,6 +205,10 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
+    - Bolts/Tasks (~> 1.9)
   - Protobuf (3.9.0)
   - TensorFlowLite (1.13.1)
 
@@ -220,9 +225,11 @@ DEPENDENCIES:
   - Firebase/MLVisionObjectDetection
   - Firebase/MLVisionTextModel
   - Firebase/Storage
+  - Parse
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -255,10 +262,12 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Parse
     - Protobuf
     - TensorFlowLite
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Firebase: 291d7b0a7b393f252358083b5d224884126fa46d
   FirebaseAnalytics: 843c7f64a8f9c79f0d03281197ebe7bb1d58d477
@@ -291,9 +300,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   TensorFlowLite: 8b9dc4eb32eac0f8cb660c66bca7604da56dcc5a
 
-PODFILE CHECKSUM: 098a82cb8fb030ea052a8ec24be27ff134812cb6
+PODFILE CHECKSUM: 78f926f3313b6fbae48466192f69ed6039f0f2c3
 
 COCOAPODS: 1.7.5

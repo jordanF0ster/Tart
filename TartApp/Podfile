@@ -29,6 +29,7 @@ target 'TartApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Parse'
 
   target 'TartAppTests' do
     inherit! :search_paths
