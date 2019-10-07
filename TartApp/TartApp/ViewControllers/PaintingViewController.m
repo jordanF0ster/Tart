@@ -10,6 +10,9 @@
 #import <Parse/Parse.h>
 
 @interface PaintingViewController ()
+{
+    NSArray *paintingsArray;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *paintingImageView;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
@@ -30,29 +33,19 @@
     
     // this gets objects with EXACTLY what is written down
     // must change later
-    //[query whereKey:@"labels" containsAllObjectsInArray:<#(nonnull NSArray *)#>
+    [query whereKey:@"labels" containsAllObjectsInArray:self.resultsArray];
     query.limit = 20;
 
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
             // do something with the array of object returned by the call
+            self->paintingsArray = [NSMutableArray arrayWithArray:posts];
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
     }];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 @end

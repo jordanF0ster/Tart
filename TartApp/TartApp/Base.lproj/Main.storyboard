@@ -70,20 +70,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxj-vz-xf5">
-                                <rect key="frame" x="96" y="460" width="182" height="30"/>
+                                <rect key="frame" x="90" y="460" width="195" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Find Paintg matching word"/>
+                                <state key="normal" title="Find Painting matching word"/>
                                 <connections>
                                     <action selector="didTapFindPainting:" destination="AoX-5n-doL" eventType="touchUpInside" id="cah-Zp-OQq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0h-id-IhS">
-                                <rect key="frame" x="182" y="401" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="plp-fm-jFr"/>
@@ -91,7 +84,6 @@
                     <navigationItem key="navigationItem" id="s3Y-9v-7Ty"/>
                     <connections>
                         <outlet property="paintingImageView" destination="Gqo-JX-i0P" id="4Q4-3f-hwP"/>
-                        <outlet property="testLabel" destination="j0h-id-IhS" id="VLS-lR-XkW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myf-uW-i7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

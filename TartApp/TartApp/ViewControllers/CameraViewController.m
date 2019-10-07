@@ -26,12 +26,8 @@ static NSString *const FIRAutoMLLocalModelManifestFilename = @"automl_labeler_ma
 /** File type of AutoML local model manifest in the main resource bundle. */
 static NSString *const FIRAutoMLManifestFileType = @"json";
 
-static float const labelConfidenceThreshold = 0.75;
 static const CGFloat FIRSmallDotRadius = 4.0;
 static const CGFloat FIRconstantScale = 1.0;
-static const CGFloat padding = 10.0;
-static const CGFloat resultsLabelHeight = 200.0;
-static const int resultsLabelLines = 5;
 
 
 @interface CameraViewController () <AVCaptureVideoDataOutputSampleBufferDelegate>
@@ -145,70 +141,6 @@ typedef NS_ENUM(NSInteger, Detector) {
 /// Detects labels on the specified image using AutoML On-Device label API.
 ///
 /// - Parameter image: The image.
-- (void)detectImageLabelsAutoMLOnDeviceInImage:(FIRVisionImage *)image
-                                         width:(CGFloat) width
-                                        height:(CGFloat)height {
-//  [self registerAutoMLModelsIfNeeded];
-//
-//  // [START config_automl_label]
-//  FIRVisionOnDeviceAutoMLImageLabelerOptions *options =
-//  [[FIRVisionOnDeviceAutoMLImageLabelerOptions alloc]
-//   initWithRemoteModelName:FIRRemoteAutoMLModelName
-//   localModelName:FIRLocalAutoMLModelName];
-//  options.confidenceThreshold = labelConfidenceThreshold;
-//  // [END config_automl_label]
-//
-//  // [START init_automl_label]
-//  FIRVisionImageLabeler *onDeviceAutoMLLabeler =
-//  [self.vision onDeviceAutoMLImageLabelerWithOptions:options];
-//  // [END init_automl_label]
-//
-//  dispatch_group_t group = dispatch_group_create();
-//  dispatch_group_enter(group);
-//
-//  // [START detect_automl_label]
-//  [onDeviceAutoMLLabeler processImage:image completion:^(NSArray<FIRVisionImageLabel *> * _Nullable labels, NSError * _Nullable error) {
-//    // [START_EXCLUDE]
-//    [self updatePreviewOverlayView];
-//    [self removeDetectionAnnotations];
-//    // [END_EXCLUDE]
-//    if (error != nil) {
-//      // [START_EXCLUDE]
-//      NSLog(@"Failed to detect labels with error: %@.", error.localizedDescription);
-//      dispatch_group_leave(group);
-//      // [END_EXCLUDE]
-//      return;
-//    }
-//
-//    if (!labels ||  labels.count == 0) {
-//      // [START_EXCLUDE]
-//      dispatch_group_leave(group);
-//      // [END_EXCLUDE]
-//      return;
-//    }
-//
-//    // [START_EXCLUDE]
-//    CGRect annotationFrame = self.annotationOverlayView.frame;
-//    CGRect resultsRect = CGRectMake(annotationFrame.origin.x + padding,
-//                                    annotationFrame.size.height - padding - resultsLabelHeight,
-//                                    annotationFrame.size.width - 2 * padding,
-//                                    resultsLabelHeight);
-//    UILabel *resultsLabel = [[UILabel alloc] initWithFrame:resultsRect];
-//    resultsLabel.textColor = UIColor.yellowColor;
-//    NSMutableArray *labelStrings = [NSMutableArray arrayWithCapacity:labels.count];
-//    for (FIRVisionImageLabel *label in labels) {
-//      [labelStrings addObject:[NSString stringWithFormat:@"Label: %@, Confidence: %@", label.text, label.confidence]];
-//    }
-//    resultsLabel.text = [labelStrings componentsJoinedByString:@"\n"];
-//    resultsLabel.adjustsFontSizeToFitWidth = YES;
-//    resultsLabel.numberOfLines = resultsLabelLines;
-//    [self.annotationOverlayView addSubview:resultsLabel];
-//    dispatch_group_leave(group);
-//    // [END_EXCLUDE]
-//  }];
-//  // [END detect_automl_label]
-//  dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
-}
 
 - (void)registerAutoMLModelsIfNeeded {
   if (self.areAutoMLModelsRegistered) return;
@@ -744,7 +676,7 @@ typedef NS_ENUM(NSInteger, Detector) {
 
     switch (_currentDetector) {
       case DetectorOnDeviceAutoMLImageLabeler:
-        [self detectImageLabelsAutoMLOnDeviceInImage:visionImage width:imageWidth height: imageHeight];
+        
         break;
       case DetectorOnDeviceFace:
         [self detectFacesOnDeviceInImage:visionImage width:imageWidth height:imageHeight];

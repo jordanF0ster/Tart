@@ -1,4 +1,5 @@
 #import "HomeViewController.h"
+#import "PaintingViewController.h"
 #import "UIImage+VisionDetection.h"
 #import "UIUtilities.h"
 
@@ -483,7 +484,19 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     });
 }
 
+NS_ASSUME_NONNULL_END
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    PaintingViewController *paintingsViewController = [segue destinationViewController];
+    paintingsViewController.resultsArray = self.resultsArray;
+}
 
 @end
 
-NS_ASSUME_NONNULL_END
+
