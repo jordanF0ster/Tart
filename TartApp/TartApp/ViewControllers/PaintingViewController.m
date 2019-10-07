@@ -40,7 +40,11 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
             // do something with the array of object returned by the call
-            self->paintingsArray = [NSMutableArray arrayWithArray:posts];
+            if ([posts count] != 0) {
+                self->paintingsArray = [NSMutableArray arrayWithArray:posts];
+            } else {
+                NSLog(@"NO RESULTS");
+            }
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
