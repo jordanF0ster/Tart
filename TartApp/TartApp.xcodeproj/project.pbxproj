@@ -16,6 +16,7 @@
 		E555C2642345757900672C1E /* UIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25E2345757900672C1E /* UIUtilities.m */; };
 		E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C2622345757900672C1E /* UIImage+VisionDetection.m */; };
 		E56B87282344FCC80020A56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56B871F2344FCC80020A56E /* GoogleService-Info.plist */; };
+		E586472B234D1E75007B47A9 /* PaintingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E586472A234D1E74007B47A9 /* PaintingCell.m */; };
 		E59346B22344FE2F006F350B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346AA2344FE2E006F350B /* AppDelegate.m */; };
 		E59681DB2322FF1400FDAED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59681D92322FF1400FDAED5 /* Main.storyboard */; };
 		E59681DD2322FF1500FDAED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59681DC2322FF1500FDAED5 /* Assets.xcassets */; };
@@ -64,6 +65,8 @@
 		E555C2612345757900672C1E /* UIImage+VisionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VisionDetection.h"; sourceTree = "<group>"; };
 		E555C2622345757900672C1E /* UIImage+VisionDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VisionDetection.m"; sourceTree = "<group>"; };
 		E56B871F2344FCC80020A56E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E5864729234D1E74007B47A9 /* PaintingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintingCell.h; sourceTree = "<group>"; };
+		E586472A234D1E74007B47A9 /* PaintingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintingCell.m; sourceTree = "<group>"; };
 		E59346A92344FE2E006F350B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.h"; sourceTree = "<group>"; };
 		E59346AA2344FE2E006F350B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.m"; sourceTree = "<group>"; };
 		E59681D02322FF1400FDAED5 /* TartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +150,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		E5864728234D1E49007B47A9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E5864729234D1E74007B47A9 /* PaintingCell.h */,
+				E586472A234D1E74007B47A9 /* PaintingCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		E59681C72322FF1400FDAED5 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		E59681D22322FF1400FDAED5 /* TartApp */ = {
 			isa = PBXGroup;
 			children = (
+				E5864728234D1E49007B47A9 /* Cells */,
 				E542C17723479D1300FB612E /* Subclasses */,
 				E56ED72F2331AF610071D4DD /* ViewControllers */,
 				E59681D92322FF1400FDAED5 /* Main.storyboard */,
@@ -457,6 +470,7 @@
 			files = (
 				E59681E32322FF1500FDAED5 /* main.m in Sources */,
 				E542C17A23479D9800FB612E /* Painting.m in Sources */,
+				E586472B234D1E75007B47A9 /* PaintingCell.m in Sources */,
 				E555C2642345757900672C1E /* UIUtilities.m in Sources */,
 				E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */,
 				E542C1802347A6A000FB612E /* HomeViewController.m in Sources */,
