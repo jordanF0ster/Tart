@@ -17,13 +17,13 @@
 		E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C2622345757900672C1E /* UIImage+VisionDetection.m */; };
 		E56B87282344FCC80020A56E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56B871F2344FCC80020A56E /* GoogleService-Info.plist */; };
 		E586472B234D1E75007B47A9 /* PaintingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E586472A234D1E74007B47A9 /* PaintingCell.m */; };
-		E59346B22344FE2F006F350B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59346AA2344FE2E006F350B /* AppDelegate.m */; };
 		E59681DB2322FF1400FDAED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59681D92322FF1400FDAED5 /* Main.storyboard */; };
 		E59681DD2322FF1500FDAED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59681DC2322FF1500FDAED5 /* Assets.xcassets */; };
 		E59681E02322FF1500FDAED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59681DE2322FF1500FDAED5 /* LaunchScreen.storyboard */; };
 		E59681E32322FF1500FDAED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E59681E22322FF1500FDAED5 /* main.m */; };
 		E59681ED2322FF1500FDAED5 /* TartAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E59681EC2322FF1500FDAED5 /* TartAppTests.m */; };
 		E59681F82322FF1500FDAED5 /* TartAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E59681F72322FF1500FDAED5 /* TartAppUITests.m */; };
+		E5EF8B5523576C7700F3A301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF8B5423576C7700F3A301 /* AppDelegate.m */; };
 		EC8527C98E895AA6F8207FCE /* Pods_TartAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B50CECD036C4E00628DCBD /* Pods_TartAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +67,6 @@
 		E56B871F2344FCC80020A56E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5864729234D1E74007B47A9 /* PaintingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintingCell.h; sourceTree = "<group>"; };
 		E586472A234D1E74007B47A9 /* PaintingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintingCell.m; sourceTree = "<group>"; };
-		E59346A92344FE2E006F350B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.h"; sourceTree = "<group>"; };
-		E59346AA2344FE2E006F350B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "../../../../.Trash/quickstart-ios 11.45.57 AM/mlvision/MLVisionExampleObjc/AppDelegate.m"; sourceTree = "<group>"; };
 		E59681D02322FF1400FDAED5 /* TartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59681DA2322FF1400FDAED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E59681DC2322FF1500FDAED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +80,8 @@
 		E59681F72322FF1500FDAED5 /* TartAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TartAppUITests.m; sourceTree = "<group>"; };
 		E59681F92322FF1500FDAED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C94D6577EEDA5DC2394977 /* Pods-TartAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5EF8B5323576C7700F3A301 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E5EF8B5423576C7700F3A301 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ED019110DA916F495AF92EF9 /* Pods-TartAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TartAppTests/Pods-TartAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,11 +192,11 @@
 				E59681DE2322FF1500FDAED5 /* LaunchScreen.storyboard */,
 				E59681E12322FF1500FDAED5 /* Info.plist */,
 				E56B871F2344FCC80020A56E /* GoogleService-Info.plist */,
-				E59346A92344FE2E006F350B /* AppDelegate.h */,
-				E59346AA2344FE2E006F350B /* AppDelegate.m */,
 				E59681E22322FF1500FDAED5 /* main.m */,
 				E555C2612345757900672C1E /* UIImage+VisionDetection.h */,
 				E555C2622345757900672C1E /* UIImage+VisionDetection.m */,
+				E5EF8B5323576C7700F3A301 /* AppDelegate.h */,
+				E5EF8B5423576C7700F3A301 /* AppDelegate.m */,
 			);
 			path = TartApp;
 			sourceTree = "<group>";
@@ -472,11 +472,11 @@
 				E542C17A23479D9800FB612E /* Painting.m in Sources */,
 				E586472B234D1E75007B47A9 /* PaintingCell.m in Sources */,
 				E555C2642345757900672C1E /* UIUtilities.m in Sources */,
+				E5EF8B5523576C7700F3A301 /* AppDelegate.m in Sources */,
 				E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */,
 				E542C1802347A6A000FB612E /* HomeViewController.m in Sources */,
 				E555C2632345757900672C1E /* CameraViewController.m in Sources */,
 				E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */,
-				E59346B22344FE2F006F350B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
