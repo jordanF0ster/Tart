@@ -33,23 +33,33 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    [self fetchPaintings];
+    [self initCollectionView];
 }
 
 - (IBAction)didTapFindPainting:(id)sender {
+}
+
+- (void)fetchPaintings {
     PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
     
     // this gets objects with EXACTLY what is written down
     // must change later
-    [query whereKey:@"labels" containsAllObjectsInArray:self.resultsArray];
+    
+    NSArray *arr = [self.resultsArray copy];
+    
+    [query whereKey:@"labels" containsAllObjectsInArray:arr];
     query.limit = 20;
-
+    
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
             // do something with the array of object returned by the call
             if (posts.count != 0) {
                 self->paintingsArray = [NSMutableArray arrayWithArray:posts];
-                self->_paintingImageView.image = [self->_resultsArray[0] objectForKey:@"image"];
+                //                self->_paintingImageView.image = [self->paintingsArray[0] objectForKey:@"picture"];
+                
+                [self.collectionView reloadData];
             } else {
                 NSLog(@"NO RESULTS");
             }
@@ -59,13 +69,27 @@
     }];
 }
 
+- (void)initCollectionView {
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    
+    layout.minimumInteritemSpacing = 5;
+    layout.minimumLineSpacing = 5;
+    CGFloat postersPerLine = 2;
+    CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumLineSpacing * (postersPerLine - 1)) / postersPerLine;
+    CGFloat itemHeight = 1.5 * itemWidth;
+    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    
+    self.collectionView.contentInsetAdjustmentBehavior = NO;
+}
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    PaintingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCellCollectionViewCell" forIndexPath:indexPath];
+    PaintingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PaintingCell" forIndexPath:indexPath];
     
     
     Painting *painting = paintingsArray[indexPath.item];
-    UIImage *image = [[UIImage alloc] initWithData:painting.image.getData];
+    NSData *data = [[painting objectForKey:@"picture"] getData];
+    
+    UIImage *image = [[UIImage alloc] initWithData:data];
     
     [cell updateCell:image];
     
