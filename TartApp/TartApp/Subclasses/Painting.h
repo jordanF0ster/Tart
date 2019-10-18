@@ -13,6 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Painting : PFObject<PFSubclassing>
 
+@property (nonatomic, strong) NSArray *labels;
+@property (nonatomic, strong) NSArray *objects;
+@property (nonatomic, strong) PFFileObject *image;
+
++ (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image;
+
 @end
 
 NS_ASSUME_NONNULL_END
