@@ -58,6 +58,27 @@
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="20.239880059970016"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="IpD-Gg-JsP">
+            <objects>
+                <viewController id="wee-bc-Mt7" customClass="ARViewController" customModule="TartApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XV9-CO-jaS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YV2-By-x9q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TnY-mX-PJL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqs-XL-tE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984.8" y="723.68815592203907"/>
+        </scene>
         <!--Painting View Controller-->
         <scene sceneID="Jdp-cF-N9m">
             <objects>

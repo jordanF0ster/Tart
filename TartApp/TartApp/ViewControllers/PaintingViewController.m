@@ -68,7 +68,7 @@
 
 - (CGSize)initCollectionView {
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
-    
+        
     layout.minimumInteritemSpacing = 5;
     layout.minimumLineSpacing = 5;
     CGFloat postersPerLine = 2;
