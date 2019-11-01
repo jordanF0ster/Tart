@@ -12,6 +12,8 @@
 		E542C17A23479D9800FB612E /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17923479D9800FB612E /* Painting.m */; };
 		E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17C23479FB800FB612E /* PaintingViewController.m */; };
 		E542C1802347A6A000FB612E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17F2347A6A000FB612E /* HomeViewController.m */; };
+		E54B4DF9236C7A9A005A45E6 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B4DF8236C7A9A005A45E6 /* Grid.swift */; };
+		E54B4DFB236C7C5E005A45E6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B4DFA236C7C5E005A45E6 /* ARViewController.swift */; };
 		E555C2632345757900672C1E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25C2345757900672C1E /* CameraViewController.m */; };
 		E555C2642345757900672C1E /* UIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C25E2345757900672C1E /* UIUtilities.m */; };
 		E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = E555C2622345757900672C1E /* UIImage+VisionDetection.m */; };
@@ -58,6 +60,9 @@
 		E542C17C23479FB800FB612E /* PaintingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintingViewController.m; sourceTree = "<group>"; };
 		E542C17E2347A6A000FB612E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E542C17F2347A6A000FB612E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E54B4DF7236C7A9A005A45E6 /* TartApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TartApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E54B4DF8236C7A9A005A45E6 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		E54B4DFA236C7C5E005A45E6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		E555C25C2345757900672C1E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		E555C25D2345757900672C1E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		E555C25E2345757900672C1E /* UIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtilities.m; sourceTree = "<group>"; };
@@ -137,6 +142,16 @@
 			path = Subclasses;
 			sourceTree = "<group>";
 		};
+		E54B4DF02369FBC8005A45E6 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				E54B4DF8236C7A9A005A45E6 /* Grid.swift */,
+				E54B4DF7236C7A9A005A45E6 /* TartApp-Bridging-Header.h */,
+				E54B4DFA236C7C5E005A45E6 /* ARViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		E56ED72F2331AF610071D4DD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +199,7 @@
 		E59681D22322FF1400FDAED5 /* TartApp */ = {
 			isa = PBXGroup;
 			children = (
+				E54B4DF02369FBC8005A45E6 /* AR */,
 				E5864728234D1E49007B47A9 /* Cells */,
 				E542C17723479D1300FB612E /* Subclasses */,
 				E56ED72F2331AF610071D4DD /* ViewControllers */,
@@ -301,6 +317,7 @@
 				TargetAttributes = {
 					E59681CF2322FF1400FDAED5 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1110;
 					};
 					E59681E72322FF1500FDAED5 = {
 						CreatedOnToolsVersion = 10.3;
@@ -471,12 +488,14 @@
 				E59681E32322FF1500FDAED5 /* main.m in Sources */,
 				E542C17A23479D9800FB612E /* Painting.m in Sources */,
 				E586472B234D1E75007B47A9 /* PaintingCell.m in Sources */,
+				E54B4DF9236C7A9A005A45E6 /* Grid.swift in Sources */,
 				E555C2642345757900672C1E /* UIUtilities.m in Sources */,
 				E5EF8B5523576C7700F3A301 /* AppDelegate.m in Sources */,
 				E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */,
 				E542C1802347A6A000FB612E /* HomeViewController.m in Sources */,
 				E555C2632345757900672C1E /* CameraViewController.m in Sources */,
 				E555C2662345757900672C1E /* UIImage+VisionDetection.m in Sources */,
+				E54B4DFB236C7C5E005A45E6 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +667,9 @@
 			baseConfigurationReference = 10B1C2D61A1D335B0C47A024 /* Pods-TartApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7Q9GY43U39;
 				INFOPLIST_FILE = TartApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,6 +678,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TartApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TartApp/AR/TartApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -666,7 +690,9 @@
 			baseConfigurationReference = DA5D47B48A1A23A8317041D4 /* Pods-TartApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7Q9GY43U39;
 				INFOPLIST_FILE = TartApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -675,6 +701,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TartApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TartApp/AR/TartApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -683,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED019110DA916F495AF92EF9 /* Pods-TartAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TartAppTests/Info.plist;
@@ -702,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5073F8439C9A198810B7308A /* Pods-TartAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TartAppTests/Info.plist;
@@ -721,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5C94D6577EEDA5DC2394977 /* Pods-TartAppUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TartAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -739,6 +770,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFAD9B4E8B4FDA6C3A630217 /* Pods-TartAppUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TartAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

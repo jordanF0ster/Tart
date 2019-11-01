@@ -34,11 +34,9 @@
     self.collectionView.delegate = self;
     
     [self fetchPaintings];
-    [self initCollectionView];
+   // [self initCollectionView];
 }
 
-- (IBAction)didTapFindPainting:(id)sender {
-}
 
 - (void)fetchPaintings {
     PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
@@ -57,7 +55,6 @@
             // do something with the array of object returned by the call
             if (posts.count != 0) {
                 self->paintingsArray = [NSMutableArray arrayWithArray:posts];
-                //                self->_paintingImageView.image = [self->paintingsArray[0] objectForKey:@"picture"];
                 
                 [self.collectionView reloadData];
             } else {
@@ -69,17 +66,19 @@
     }];
 }
 
-- (void)initCollectionView {
+- (CGSize)initCollectionView {
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
-    
+        
     layout.minimumInteritemSpacing = 5;
     layout.minimumLineSpacing = 5;
     CGFloat postersPerLine = 2;
     CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumLineSpacing * (postersPerLine - 1)) / postersPerLine;
     CGFloat itemHeight = 1.5 * itemWidth;
-    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
     
-    self.collectionView.contentInsetAdjustmentBehavior = NO;
+    
+    return CGSizeMake(itemWidth, itemHeight);
+    
+    //self.collectionView.contentInsetAdjustmentBehavior = NO;
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -98,6 +97,10 @@
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [paintingsArray count];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [self initCollectionView];
 }
 
 @end
