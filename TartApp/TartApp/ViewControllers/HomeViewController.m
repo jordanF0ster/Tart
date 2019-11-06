@@ -119,9 +119,6 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     [self openCamera:self];
 }
 
-- (IBAction)didTapDetectText:(id)sender {
-    [self detectTextOnDeviceInImage:_textImage.image];
-}
 
 
 - (IBAction)openPhotoLibrary:(id)sender {
@@ -200,6 +197,7 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
         dispatch_async(dispatch_get_main_queue(), ^{
             self->_textImage.image = scaledImage;
             [self detectTextOnDeviceInImage:self->_textImage.image];
+            [self performSegueWithIdentifier:@"HomeToPainting" sender:self];
         });
     });
 }

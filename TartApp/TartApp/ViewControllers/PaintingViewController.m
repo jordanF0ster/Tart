@@ -12,9 +12,6 @@
 #import "Painting.h"
 
 @interface PaintingViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-{
-    NSArray *paintingsArray;
-}
 
 @property (weak, nonatomic) IBOutlet UIImageView *paintingImageView;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
@@ -54,7 +51,7 @@
         if (posts != nil) {
             // do something with the array of object returned by the call
             if (posts.count != 0) {
-                self->paintingsArray = [NSMutableArray arrayWithArray:posts];
+                self.paintingsArray = [NSMutableArray arrayWithArray:posts];
                 
                 [self.collectionView reloadData];
             } else {
@@ -85,7 +82,7 @@
     PaintingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PaintingCell" forIndexPath:indexPath];
     
     
-    Painting *painting = paintingsArray[indexPath.item];
+    Painting *painting = self.paintingsArray[indexPath.item];
     NSData *data = [[painting objectForKey:@"picture"] getData];
     
     UIImage *image = [[UIImage alloc] initWithData:data];
@@ -96,11 +93,15 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [paintingsArray count];
+    return [self.paintingsArray count];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return [self initCollectionView];
+}
+
+- (IBAction)didTapAR:(id)sender {
+    [self performSegueWithIdentifier:@"paintingsToAR" sender:self];
 }
 
 @end
