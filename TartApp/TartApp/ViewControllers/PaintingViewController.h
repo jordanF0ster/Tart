@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PaintingViewController : UIViewController
 
 @property (strong, nonatomic) NSMutableArray *resultsArray;
+@property (strong, nonatomic) NSArray *paintingsArray;
 
 @end
 

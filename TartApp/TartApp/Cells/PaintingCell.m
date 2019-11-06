@@ -17,7 +17,7 @@
 @implementation PaintingCell
 
 - (void)updateCell:(UIImage *)image {
-    self.backgroundColor = [UIColor redColor];
+    self.backgroundColor = [UIColor clearColor];
     self.paintingImage.image = image;
 }
 
