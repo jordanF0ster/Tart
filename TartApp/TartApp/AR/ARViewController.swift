@@ -10,8 +10,11 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
+@objc class ARViewController: UIViewController, ARSCNViewDelegate {
 
+    public var timesTapped = 0;
+    @objc public var arImage : NSMutableArray = [];
+    
     @IBOutlet var sceneView: ARSCNView!
         var grids = [Grid]()
         
