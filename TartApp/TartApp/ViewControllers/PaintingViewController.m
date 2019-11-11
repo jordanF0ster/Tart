@@ -11,6 +11,8 @@
 #import "PaintingCell.h"
 #import "Painting.h"
 #import "TartApp-Bridging-Header.h"
+#import "TartApp-Swift.h"
+
 
 @interface PaintingViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 

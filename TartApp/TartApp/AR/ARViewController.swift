@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import Parse
 
 @objc class ARViewController: UIViewController, ARSCNViewDelegate {
 
@@ -125,9 +126,21 @@ import ARKit
             // 1.
             let planeGeometry = SCNPlane(width: 0.2, height: 0.35)
             let material = SCNMaterial()
-            material.diffuse.contents = UIImage(named: "mona-lisa")
+            
+            var painting = self.arImage[timesTapped] as? PFObject
+            var image = painting?.object(forKey: "picture") as? PFFileObject
+            
+            var data : Data
+            do {
+                data = try image!.getData()
+            } catch {
+                data = Data();
+            }
+            
+            material.diffuse.contents = UIImage(data: data)
             planeGeometry.materials = [material]
             
+            timesTapped += 1
             // 2.
             let paintingNode = SCNNode(geometry: planeGeometry)
             paintingNode.transform = SCNMatrix4(hitResult.anchor!.transform)
