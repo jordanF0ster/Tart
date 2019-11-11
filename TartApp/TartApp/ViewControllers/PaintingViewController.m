@@ -10,6 +10,9 @@
 #import <Parse/Parse.h>
 #import "PaintingCell.h"
 #import "Painting.h"
+#import "TartApp-Bridging-Header.h"
+#import "TartApp-Swift.h"
+
 
 @interface PaintingViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -36,6 +39,10 @@
 
 
 - (void)fetchPaintings {
+//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"labels MATCHES[c] %@", self.resultsArray[0]];
+//
+//    PFQuery *query = [PFQuery queryWithClassName:@"Paintings" predicate:pred];
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
     
     // this gets objects with EXACTLY what is written down
@@ -43,9 +50,10 @@
     
     NSArray *arr = [self.resultsArray copy];
     
-    [query whereKey:@"labels" containsAllObjectsInArray:arr];
-    query.limit = 20;
     
+    [query whereKey:@"labels" containsAllObjectsInArray:arr];
+    //query.limit = 20;
+
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
@@ -56,6 +64,11 @@
                 [self.collectionView reloadData];
             } else {
                 NSLog(@"NO RESULTS");
+                UIAlertController *resultsAlertController = [UIAlertController alertControllerWithTitle:@"NO RESULTS" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+                [resultsAlertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    [resultsAlertController dismissViewControllerAnimated:YES completion:nil];
+                }]];
+                 [self presentViewController:resultsAlertController animated:YES completion:nil];
             }
         } else {
             NSLog(@"%@", error.localizedDescription);
@@ -102,6 +115,17 @@
 
 - (IBAction)didTapAR:(id)sender {
     [self performSegueWithIdentifier:@"paintingsToAR" sender:self];
+}
+
+- (NSMutableArray *)getPaitingsArray {
+    return [NSMutableArray arrayWithArray:self.paintingsArray];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
+    ARViewController *arViewController = [segue destinationViewController];
+    arViewController.arImage = [NSMutableArray arrayWithArray:self.paintingsArray];
 }
 
 @end

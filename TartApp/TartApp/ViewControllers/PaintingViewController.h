@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSMutableArray *resultsArray;
 @property (strong, nonatomic) NSArray *paintingsArray;
 
+- (NSMutableArray *)getPaitingsArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

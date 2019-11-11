@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		312D8FC95B17257718677D7C /* Pods_TartAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682699A4B64B60659CB4637 /* Pods_TartAppTests.framework */; };
-		3F0895CEF0A11F371495EB1C /* Pods_TartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BFF802759054C3D3A22056 /* Pods_TartApp.framework */; };
+		5D2E3E6AE21EC250363BC8FC /* Pods_TartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04141C86009D89F3C695002 /* Pods_TartApp.framework */; };
+		C27E73A52FF14E30B003221A /* Pods_TartAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9915E1FDB39BCF85364922 /* Pods_TartAppUITests.framework */; };
 		E542C17A23479D9800FB612E /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17923479D9800FB612E /* Painting.m */; };
 		E542C17D23479FB800FB612E /* PaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17C23479FB800FB612E /* PaintingViewController.m */; };
 		E542C1802347A6A000FB612E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542C17F2347A6A000FB612E /* HomeViewController.m */; };
@@ -26,7 +26,7 @@
 		E59681ED2322FF1500FDAED5 /* TartAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E59681EC2322FF1500FDAED5 /* TartAppTests.m */; };
 		E59681F82322FF1500FDAED5 /* TartAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E59681F72322FF1500FDAED5 /* TartAppUITests.m */; };
 		E5EF8B5523576C7700F3A301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EF8B5423576C7700F3A301 /* AppDelegate.m */; };
-		EC8527C98E895AA6F8207FCE /* Pods_TartAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B50CECD036C4E00628DCBD /* Pods_TartAppUITests.framework */; };
+		FD9889450D6AA292EF032023 /* Pods_TartAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65D65C23EE07CF37A2BF437 /* Pods_TartAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0682699A4B64B60659CB4637 /* Pods_TartAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		10B1C2D61A1D335B0C47A024 /* Pods-TartApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartApp.debug.xcconfig"; path = "Target Support Files/Pods-TartApp/Pods-TartApp.debug.xcconfig"; sourceTree = "<group>"; };
-		45BFF802759054C3D3A22056 /* Pods_TartApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5073F8439C9A198810B7308A /* Pods-TartAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppTests.release.xcconfig"; path = "Target Support Files/Pods-TartAppTests/Pods-TartAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		64B50CECD036C4E00628DCBD /* Pods_TartAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA5D47B48A1A23A8317041D4 /* Pods-TartApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartApp.release.xcconfig"; path = "Target Support Files/Pods-TartApp/Pods-TartApp.release.xcconfig"; sourceTree = "<group>"; };
-		DFAD9B4E8B4FDA6C3A630217 /* Pods-TartAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		11787CEF9BA3553FAE166740 /* Pods-TartAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppTests.release.xcconfig"; path = "Target Support Files/Pods-TartAppTests/Pods-TartAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		13FC82D2CB1D63AC23E91563 /* Pods-TartApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartApp.debug.xcconfig"; path = "Target Support Files/Pods-TartApp/Pods-TartApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3A9915E1FDB39BCF85364922 /* Pods_TartAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D29CA58961D58B417F0D807 /* Pods-TartApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartApp.release.xcconfig"; path = "Target Support Files/Pods-TartApp/Pods-TartApp.release.xcconfig"; sourceTree = "<group>"; };
+		84443030E04D036DA906CB54 /* Pods-TartAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BC3FD83298568A0A26E68B21 /* Pods-TartAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TartAppTests/Pods-TartAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C04141C86009D89F3C695002 /* Pods_TartApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4911CBD145C048590CB2CC4 /* Pods-TartAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E52FF1912378E9E200878EB5 /* TartApp.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TartApp.pch; sourceTree = "<group>"; };
 		E542C17823479D9800FB612E /* Painting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Painting.h; sourceTree = "<group>"; };
 		E542C17923479D9800FB612E /* Painting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Painting.m; sourceTree = "<group>"; };
 		E542C17B23479FB800FB612E /* PaintingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintingViewController.h; sourceTree = "<group>"; };
@@ -84,10 +86,9 @@
 		E59681F32322FF1500FDAED5 /* TartAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TartAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59681F72322FF1500FDAED5 /* TartAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TartAppUITests.m; sourceTree = "<group>"; };
 		E59681F92322FF1500FDAED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5C94D6577EEDA5DC2394977 /* Pods-TartAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TartAppUITests/Pods-TartAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E5EF8B5323576C7700F3A301 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5EF8B5423576C7700F3A301 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ED019110DA916F495AF92EF9 /* Pods-TartAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TartAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TartAppTests/Pods-TartAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E65D65C23EE07CF37A2BF437 /* Pods_TartAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TartAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F0895CEF0A11F371495EB1C /* Pods_TartApp.framework in Frameworks */,
+				5D2E3E6AE21EC250363BC8FC /* Pods_TartApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312D8FC95B17257718677D7C /* Pods_TartAppTests.framework in Frameworks */,
+				FD9889450D6AA292EF032023 /* Pods_TartAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC8527C98E895AA6F8207FCE /* Pods_TartAppUITests.framework in Frameworks */,
+				C27E73A52FF14E30B003221A /* Pods_TartAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,14 +122,24 @@
 		0D9DABBA0D6FDD7296D354D6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				10B1C2D61A1D335B0C47A024 /* Pods-TartApp.debug.xcconfig */,
-				DA5D47B48A1A23A8317041D4 /* Pods-TartApp.release.xcconfig */,
-				ED019110DA916F495AF92EF9 /* Pods-TartAppTests.debug.xcconfig */,
-				5073F8439C9A198810B7308A /* Pods-TartAppTests.release.xcconfig */,
-				E5C94D6577EEDA5DC2394977 /* Pods-TartAppUITests.debug.xcconfig */,
-				DFAD9B4E8B4FDA6C3A630217 /* Pods-TartAppUITests.release.xcconfig */,
+				13FC82D2CB1D63AC23E91563 /* Pods-TartApp.debug.xcconfig */,
+				7D29CA58961D58B417F0D807 /* Pods-TartApp.release.xcconfig */,
+				BC3FD83298568A0A26E68B21 /* Pods-TartAppTests.debug.xcconfig */,
+				11787CEF9BA3553FAE166740 /* Pods-TartAppTests.release.xcconfig */,
+				E4911CBD145C048590CB2CC4 /* Pods-TartAppUITests.debug.xcconfig */,
+				84443030E04D036DA906CB54 /* Pods-TartAppUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		710292E697DE09F2D7EF0278 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C04141C86009D89F3C695002 /* Pods_TartApp.framework */,
+				E65D65C23EE07CF37A2BF437 /* Pods_TartAppTests.framework */,
+				3A9915E1FDB39BCF85364922 /* Pods_TartAppUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E542C17723479D1300FB612E /* Subclasses */ = {
@@ -177,12 +188,13 @@
 		E59681C72322FF1400FDAED5 = {
 			isa = PBXGroup;
 			children = (
+				E52FF1912378E9E200878EB5 /* TartApp.pch */,
 				E59681D22322FF1400FDAED5 /* TartApp */,
 				E59681EB2322FF1500FDAED5 /* TartAppTests */,
 				E59681F62322FF1500FDAED5 /* TartAppUITests */,
 				E59681D12322FF1400FDAED5 /* Products */,
 				0D9DABBA0D6FDD7296D354D6 /* Pods */,
-				F716C1DFDED8BE0DA6ECF9FF /* Frameworks */,
+				710292E697DE09F2D7EF0278 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,16 +247,6 @@
 			path = TartAppUITests;
 			sourceTree = "<group>";
 		};
-		F716C1DFDED8BE0DA6ECF9FF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				45BFF802759054C3D3A22056 /* Pods_TartApp.framework */,
-				0682699A4B64B60659CB4637 /* Pods_TartAppTests.framework */,
-				64B50CECD036C4E00628DCBD /* Pods_TartAppUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,12 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E59681FC2322FF1500FDAED5 /* Build configuration list for PBXNativeTarget "TartApp" */;
 			buildPhases = (
-				0244B9A1F873C8E9E13BABC5 /* [CP] Check Pods Manifest.lock */,
+				355676F464FC9124DDD0D2FD /* [CP] Check Pods Manifest.lock */,
 				E59681CC2322FF1400FDAED5 /* Sources */,
 				E59681CD2322FF1400FDAED5 /* Frameworks */,
 				E59681CE2322FF1400FDAED5 /* Resources */,
-				BE05D5DA7056CF608F865D75 /* [CP] Embed Pods Frameworks */,
-				E211F99BA2D4AEB7A04E6224 /* [CP] Copy Pods Resources */,
+				29B832E856E7D37D289FE960 /* [CP] Embed Pods Frameworks */,
+				A548DC75BBB50C1ADDDFD732 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,7 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E59681FF2322FF1500FDAED5 /* Build configuration list for PBXNativeTarget "TartAppTests" */;
 			buildPhases = (
-				A38C6B80825A463FA5710859 /* [CP] Check Pods Manifest.lock */,
+				BAC864FECF5A1E9F72BF65F6 /* [CP] Check Pods Manifest.lock */,
 				E59681E42322FF1500FDAED5 /* Sources */,
 				E59681E52322FF1500FDAED5 /* Frameworks */,
 				E59681E62322FF1500FDAED5 /* Resources */,
@@ -291,7 +293,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E59682022322FF1500FDAED5 /* Build configuration list for PBXNativeTarget "TartAppUITests" */;
 			buildPhases = (
-				221072CDCF3297A7499344B9 /* [CP] Check Pods Manifest.lock */,
+				5229EED5B9D60B74E516B36A /* [CP] Check Pods Manifest.lock */,
 				E59681EF2322FF1500FDAED5 /* Sources */,
 				E59681F02322FF1500FDAED5 /* Frameworks */,
 				E59681F12322FF1500FDAED5 /* Resources */,
@@ -378,7 +380,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0244B9A1F873C8E9E13BABC5 /* [CP] Check Pods Manifest.lock */ = {
+		29B832E856E7D37D289FE960 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		355676F464FC9124DDD0D2FD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,7 +419,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		221072CDCF3297A7499344B9 /* [CP] Check Pods Manifest.lock */ = {
+		5229EED5B9D60B74E516B36A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,7 +441,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A38C6B80825A463FA5710859 /* [CP] Check Pods Manifest.lock */ = {
+		A548DC75BBB50C1ADDDFD732 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAC864FECF5A1E9F72BF65F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,40 +478,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE05D5DA7056CF608F865D75 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E211F99BA2D4AEB7A04E6224 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TartApp/Pods-TartApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -664,13 +666,15 @@
 		};
 		E59681FD2322FF1500FDAED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10B1C2D61A1D335B0C47A024 /* Pods-TartApp.debug.xcconfig */;
+			baseConfigurationReference = 13FC82D2CB1D63AC23E91563 /* Pods-TartApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7Q9GY43U39;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TartApp.pch";
 				INFOPLIST_FILE = TartApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -687,13 +691,15 @@
 		};
 		E59681FE2322FF1500FDAED5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA5D47B48A1A23A8317041D4 /* Pods-TartApp.release.xcconfig */;
+			baseConfigurationReference = 7D29CA58961D58B417F0D807 /* Pods-TartApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7Q9GY43U39;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TartApp.pch";
 				INFOPLIST_FILE = TartApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,7 +715,7 @@
 		};
 		E59682002322FF1500FDAED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED019110DA916F495AF92EF9 /* Pods-TartAppTests.debug.xcconfig */;
+			baseConfigurationReference = BC3FD83298568A0A26E68B21 /* Pods-TartAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -729,7 +735,7 @@
 		};
 		E59682012322FF1500FDAED5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5073F8439C9A198810B7308A /* Pods-TartAppTests.release.xcconfig */;
+			baseConfigurationReference = 11787CEF9BA3553FAE166740 /* Pods-TartAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -749,7 +755,7 @@
 		};
 		E59682032322FF1500FDAED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5C94D6577EEDA5DC2394977 /* Pods-TartAppUITests.debug.xcconfig */;
+			baseConfigurationReference = E4911CBD145C048590CB2CC4 /* Pods-TartAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -768,7 +774,7 @@
 		};
 		E59682042322FF1500FDAED5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFAD9B4E8B4FDA6C3A630217 /* Pods-TartAppUITests.release.xcconfig */;
+			baseConfigurationReference = 84443030E04D036DA906CB54 /* Pods-TartAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
