@@ -150,6 +150,7 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
 - (void)clearResults {
     [self removeDetectionAnnotations];
     self.resultsText = [NSMutableString new];
+    self.resultsArray = [NSMutableArray new];
 }
 
 - (void)showResults {

@@ -22,7 +22,9 @@
 
 @end
 
-@implementation PaintingViewController
+@implementation PaintingViewController{
+    NSMutableArray *totalArr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,15 +35,15 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    totalArr = [NSMutableArray new];
+    
     [self fetchPaintings];
+    [self fetchPaintingsFromObj];
    // [self initCollectionView];
 }
 
 
 - (void)fetchPaintings {
-//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"labels MATCHES[c] %@", self.resultsArray[0]];
-//
-//    PFQuery *query = [PFQuery queryWithClassName:@"Paintings" predicate:pred];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
     
@@ -59,16 +61,48 @@
         if (posts != nil) {
             // do something with the array of object returned by the call
             if (posts.count != 0) {
-                self.paintingsArray = [NSMutableArray arrayWithArray:posts];
+                [self->totalArr addObjectsFromArray:posts];
+                self.paintingsArray = [NSArray arrayWithArray:self->totalArr];
                 
                 [self.collectionView reloadData];
             } else {
-                NSLog(@"NO RESULTS");
-                UIAlertController *resultsAlertController = [UIAlertController alertControllerWithTitle:@"NO RESULTS" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-                [resultsAlertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                    [resultsAlertController dismissViewControllerAnimated:YES completion:nil];
-                }]];
-                 [self presentViewController:resultsAlertController animated:YES completion:nil];
+//                NSLog(@"NO RESULTS");
+//                UIAlertController *resultsAlertController = [UIAlertController alertControllerWithTitle:@"NO RESULTS" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//                [resultsAlertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//                    [resultsAlertController dismissViewControllerAnimated:YES completion:nil];
+//                }]];
+//                 [self presentViewController:resultsAlertController animated:YES completion:nil];
+            }
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
+- (void)fetchPaintingsFromObj {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
+    
+    // this gets objects with EXACTLY what is written down
+    // must change later
+    
+    NSArray *arr = [self.resultsArray copy];
+    
+    
+    [query whereKey:@"objects" containsAllObjectsInArray:arr];
+    //query.limit = 20;
+
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            // do something with the array of object returned by the call
+            if (posts.count != 0) {
+                [self->totalArr addObjectsFromArray:posts];
+                self.paintingsArray = [NSArray arrayWithArray:self->totalArr];
+                
+                [self.collectionView reloadData];
+            } else {
+                
             }
         } else {
             NSLog(@"%@", error.localizedDescription);

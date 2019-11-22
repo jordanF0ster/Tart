@@ -119,7 +119,9 @@ import Parse
             guard let hitTest = hitTestResults.first, let anchor = hitTest.anchor as? ARPlaneAnchor, let gridIndex = grids.firstIndex(where: { $0.anchor == anchor }) else {
                 return
             }
-            addPainting(hitTest, grids[gridIndex])
+            if (self.timesTapped < self.arImage.count){
+                addPainting(hitTest, grids[gridIndex])
+            }
         }
         
         func addPainting(_ hitResult: ARHitTestResult, _ grid: Grid) {
