@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,20 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-Aj-qbx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-Aj-qbx">
                                 <rect key="frame" x="16" y="20" width="343" height="314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-Hm-EU2">
-                                <rect key="frame" x="150" y="409" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="pick image"/>
-                                <connections>
-                                    <action selector="didTapPickImage:" destination="WMt-1A-1qc" eventType="touchUpInside" id="duf-Zi-WaP"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pti-Lp-jSu">
+                                <rect key="frame" x="137" y="409" width="101" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-Hm-EU2">
+                                        <rect key="frame" x="13.5" y="0.0" width="74" height="30"/>
+                                        <state key="normal" title="pick image">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPickImage:" destination="WMt-1A-1qc" eventType="touchUpInside" id="duf-Zi-WaP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gW2-Hm-EU2" firstAttribute="top" secondItem="Pti-Lp-jSu" secondAttribute="top" id="etP-6D-TR8"/>
+                                    <constraint firstAttribute="height" constant="30" id="gkX-HI-2rV"/>
+                                    <constraint firstItem="gW2-Hm-EU2" firstAttribute="centerX" secondItem="Pti-Lp-jSu" secondAttribute="centerX" id="hjb-uo-ahL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pti-Lp-jSu" firstAttribute="centerX" secondItem="lKi-Aj-qbx" secondAttribute="centerX" id="4On-vB-lyD"/>
+                            <constraint firstItem="lKi-Aj-qbx" firstAttribute="top" secondItem="g9h-zg-2dI" secondAttribute="top" constant="20" id="4WJ-ft-w9I"/>
+                            <constraint firstItem="Pti-Lp-jSu" firstAttribute="leading" secondItem="9rd-xg-8NT" secondAttribute="leading" constant="137" id="I7c-q5-J4X"/>
+                            <constraint firstItem="Pti-Lp-jSu" firstAttribute="top" secondItem="lKi-Aj-qbx" secondAttribute="bottom" constant="75" id="Ike-v1-goH"/>
+                            <constraint firstAttribute="bottom" secondItem="lKi-Aj-qbx" secondAttribute="bottom" constant="333" id="O3U-X2-yAy"/>
+                            <constraint firstItem="9rd-xg-8NT" firstAttribute="trailing" secondItem="lKi-Aj-qbx" secondAttribute="trailing" constant="16" id="iNJ-Bv-YHt"/>
+                            <constraint firstItem="lKi-Aj-qbx" firstAttribute="leading" secondItem="9rd-xg-8NT" secondAttribute="leading" constant="16" id="pmC-cT-XKf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9rd-xg-8NT"/>
                     </view>
                     <navigationItem key="navigationItem" id="uHs-gd-Bnj"/>
@@ -51,12 +71,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YV2-By-x9q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YV2-By-x9q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </arscnView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YV2-By-x9q" firstAttribute="leading" secondItem="TnY-mX-PJL" secondAttribute="leading" id="Mtb-ae-C4M"/>
+                            <constraint firstItem="YV2-By-x9q" firstAttribute="bottom" secondItem="TnY-mX-PJL" secondAttribute="bottom" id="Pd6-ml-DIy"/>
+                            <constraint firstItem="YV2-By-x9q" firstAttribute="top" secondItem="TnY-mX-PJL" secondAttribute="top" id="ca3-oi-ZqU"/>
+                            <constraint firstItem="YV2-By-x9q" firstAttribute="trailing" secondItem="TnY-mX-PJL" secondAttribute="trailing" id="xIG-Hd-hMR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TnY-mX-PJL"/>
                     </view>
                     <connections>
@@ -75,9 +100,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1b-O3-j0z">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E1b-O3-j0z">
                                 <rect key="frame" x="16" y="0.0" width="343" height="563"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jrw-Qp-lCF">
                                     <size key="itemSize" width="162" height="208"/>
@@ -106,9 +130,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dql-xr-5S8">
-                                <rect key="frame" x="149" y="571" width="77" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dql-xr-5S8">
+                                <rect key="frame" x="152.5" y="571" width="70" height="30"/>
                                 <state key="normal" title="GO TO AR"/>
                                 <connections>
                                     <action selector="didTapAR:" destination="AoX-5n-doL" eventType="touchUpInside" id="yap-cP-5F5"/>
@@ -116,6 +139,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E1b-O3-j0z" firstAttribute="leading" secondItem="tgm-JN-DPI" secondAttribute="leading" constant="16" id="0f2-YV-bNi"/>
+                            <constraint firstAttribute="bottom" secondItem="E1b-O3-j0z" secondAttribute="bottom" constant="84" id="6vU-Uw-a1g"/>
+                            <constraint firstAttribute="trailing" secondItem="E1b-O3-j0z" secondAttribute="trailing" constant="16" id="7p8-vS-QPy"/>
+                            <constraint firstItem="dql-xr-5S8" firstAttribute="top" secondItem="E1b-O3-j0z" secondAttribute="bottom" constant="8" id="GyZ-og-OrF"/>
+                            <constraint firstItem="dql-xr-5S8" firstAttribute="centerX" secondItem="E1b-O3-j0z" secondAttribute="centerX" id="NvY-6Z-e2R"/>
+                            <constraint firstItem="E1b-O3-j0z" firstAttribute="top" secondItem="plp-fm-jFr" secondAttribute="top" id="n82-7g-dy3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="plp-fm-jFr"/>
                     </view>
                     <navigationItem key="navigationItem" id="s3Y-9v-7Ty"/>
