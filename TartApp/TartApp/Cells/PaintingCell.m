@@ -18,7 +18,13 @@
 
 - (void)updateCell:(UIImage *)image {
     self.backgroundColor = [UIColor clearColor];
+    
+    self.paintingImage.layer.masksToBounds = YES;
+
     self.paintingImage.image = image;
+    
+    self.paintingImage.layer.cornerRadius = 25.0f;
+    
 }
 
 @end

@@ -2,6 +2,7 @@
 #import "PaintingViewController.h"
 #import "UIImage+VisionDetection.h"
 #import "UIUtilities.h"
+#include <Parse/Parse.h>
 
 @import Firebase;
 
@@ -63,6 +64,9 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
 
 @property (weak, nonatomic) IBOutlet UIImageView *textImage;
 
+
+@property (strong, nonatomic) NSArray *party;
+
 @end
 
 @implementation HomeViewController
@@ -70,8 +74,6 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    images = @[@"grace_hopper.jpg", @"barcode_128.png", @"qr_code.jpg", @"beach.jpg", @"image_has_text.jpg", @"liberty.jpg"];
     
     // [START init_vision]
     self.vision = [FIRVision vision];
@@ -83,7 +85,6 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     self.resultsText = [NSMutableString new];
     self.resultsArray = [NSMutableArray new];
     
-    _currentImage = 0;
     _annotationOverlayView = [[UIView alloc] initWithFrame:CGRectZero];
     _annotationOverlayView.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -495,6 +496,67 @@ NS_ASSUME_NONNULL_END
     
     PaintingViewController *paintingsViewController = [segue destinationViewController];
     paintingsViewController.resultsArray = self.resultsArray;
+}
+
+#pragma mark - JSON
+
+- (void)updateObjects {
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"paintingInfo"
+                                                         ofType:@"json"];
+    
+    //check file exists
+    if (fileName) {
+        //retrieve file content
+        NSData *partyData = [[NSData alloc] initWithContentsOfFile:fileName];
+        
+        //convert JSON NSData to a usable NSDictionary
+        NSError *error;
+        self.party = [NSJSONSerialization JSONObjectWithData:partyData
+                                                              options:0
+                                                                error:&error];
+        
+        if (error) {
+            NSLog(@"Something went wrong! %@", error.localizedDescription);
+        }
+        else {
+            NSLog(@"party info: %@", self.party);
+        }
+    }
+    else {
+        NSLog(@"Couldn't find file!");
+    }
+    
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
+    query.limit = 10001;
+    [query orderByAscending:@"image"];
+        
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            NSArray *newPaintings = posts;
+            int i = 0;
+            for (int j = 1; j < newPaintings.count; j++) {
+
+                while (([[[newPaintings[j] objectForKey:@"image"] substringToIndex:4] isEqualToString:self->_party[i][@"ID"]]) == FALSE) {
+                    i++;
+                }
+                NSLog(@"%@\n", [newPaintings[j] objectForKey:@"image"]);
+                NSLog(@"%@", self->_party[i][@"ID"]);
+                newPaintings[j][@"Maker"] = self->_party[i][@"Maker"];
+                newPaintings[j][@"Title"] = self->_party[i][@"Title"];
+                newPaintings[j][@"Type"] = self->_party[i][@"OPTION3"];
+                newPaintings[j][@"Origin"] = self->_party[i][@"OPTION8"];
+                
+                [newPaintings[j] save];
+                i++;
+            }
+        } else {
+            NSLog(@"FUCKKK %@", error.localizedDescription);
+        }
+    }];
+    
 }
 
 @end
