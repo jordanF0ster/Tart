@@ -64,6 +64,7 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
 
 @property (weak, nonatomic) IBOutlet UIImageView *textImage;
 
+@property (weak, nonatomic) IBOutlet UIView *buttonView;
 
 @property (strong, nonatomic) NSArray *party;
 
@@ -78,6 +79,8 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     // [START init_vision]
     self.vision = [FIRVision vision];
     // [END init_vision]
+    
+    self.buttonView.layer.cornerRadius = 10;
     
     _modelManager = [FIRModelManager modelManager];
     
@@ -321,8 +324,6 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     // [END recognize_document_text]
 }
 
-
-
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
@@ -348,7 +349,7 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     // [START init_text]
     FIRVisionTextRecognizer *onDeviceTextRecognizer = [_vision onDeviceTextRecognizer];
     // [END init_text]
-    
+        
     // Define the metadata for the image.
     FIRVisionImageMetadata *imageMetadata = [FIRVisionImageMetadata new];
     imageMetadata.orientation = [UIUtilities visionImageOrientationFromImageOrientation:image.imageOrientation];
@@ -359,130 +360,6 @@ static NSString *const FIRAutoMLManifestFileType = @"json";
     
     [self.resultsText appendString:@"Running On-Device Text Recognition...\n"];
     [self process:visionImage withTextRecognizer:onDeviceTextRecognizer];
-}
-
-#pragma mark - Vision Cloud Detection
-
-/// Detects text on the specified image and draws a frame around the recognized text using the
-/// Cloud text recognizer.
-///
-/// - Parameter image: The image.
-- (void)detectTextInCloudInImage:(UIImage *)image withOptions:(nullable FIRVisionCloudTextRecognizerOptions *)options {
-    if (!image) {
-        return;
-    }
-    
-    // Define the metadata for the image.
-    FIRVisionImageMetadata *imageMetadata = [FIRVisionImageMetadata new];
-    imageMetadata.orientation = [UIUtilities visionImageOrientationFromImageOrientation:image.imageOrientation];
-    
-    // Initialize a VisionImage object with the given UIImage.
-    FIRVisionImage *visionImage = [[FIRVisionImage alloc] initWithImage:image];
-    visionImage.metadata = imageMetadata;
-    
-    
-    FIRVisionTextRecognizer *cloudTextRecognizer;
-    NSString *modelTypeString = sparseTextModelName;
-    if (options != nil) {
-        modelTypeString = (options.modelType == FIRVisionCloudTextModelTypeDense) ? denseTextModelName : modelTypeString;
-        // [START init_text_cloud]
-        cloudTextRecognizer = [_vision cloudTextRecognizerWithOptions:options];
-        // [END init_text_cloud]
-    } else {
-        cloudTextRecognizer = [_vision cloudTextRecognizer];
-    }
-    
-    [_resultsText appendString:[NSString stringWithFormat:@"Running Cloud Text Recognition (%@ model)...\n", modelTypeString]];
-    [self process:visionImage withTextRecognizer:cloudTextRecognizer];
-}
-
-/// Detects document text on the specified image and draws a frame around the recognized text
-/// using the Cloud document text recognizer.
-///
-/// - Parameter image: The image.
-- (void)detectDocumentTextInCloudInImage:(UIImage *)image {
-    if (!image) {
-        return;
-    }
-    
-    // [START init_document_text_cloud]
-    FIRVisionDocumentTextRecognizer *cloudDocumentTextRecognizer = [_vision cloudDocumentTextRecognizer];
-    // [END init_document_text_cloud]
-    
-    // Define the metadata for the image.
-    FIRVisionImageMetadata *imageMetadata = [FIRVisionImageMetadata new];
-    imageMetadata.orientation = [UIUtilities visionImageOrientationFromImageOrientation:image.imageOrientation];
-    
-    // Initialize a VisionImage object with the given UIImage.
-    FIRVisionImage *visionImage = [[FIRVisionImage alloc] initWithImage:image];
-    visionImage.metadata = imageMetadata;
-    
-    [_resultsText appendString:@"Running Cloud Document Text Recognition...\n"];
-    [self process:visionImage withDocumentTextRecognizer:cloudDocumentTextRecognizer];
-}
-
-
-- (void)registerAutoMLModelsIfNeeded {
-    if (self.areAutoMLModelsRegistered) return;
-    
-    FIRModelDownloadConditions *initialConditions = [[FIRModelDownloadConditions alloc] init];
-    FIRModelDownloadConditions *updateConditions =
-    [[FIRModelDownloadConditions alloc] initWithAllowsCellularAccess:NO
-                                         allowsBackgroundDownloading:YES];
-    FIRRemoteModel *remoteModel = [[FIRRemoteModel alloc] initWithName:FIRRemoteAutoMLModelName
-                                                    allowsModelUpdates:YES
-                                                     initialConditions:initialConditions
-                                                      updateConditions:updateConditions];
-    if (![_modelManager registerRemoteModel:remoteModel]) {
-        NSLog(@"Failed to register AutoML local model");
-    }
-    
-    [NSNotificationCenter.defaultCenter addObserver:self
-                                           selector:@selector(remoteModelDownloadDidSucceed:) name:FIRModelDownloadDidSucceedNotification object:nil];
-    [NSNotificationCenter.defaultCenter addObserver:self
-                                           selector:@selector(remoteModelDownloadDidFail:) name:FIRModelDownloadDidFailNotification object:nil];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.downloadProgressView.hidden = NO;
-        self.downloadProgressView.observedProgress = [self.modelManager downloadRemoteModel:remoteModel];
-    });
-    
-    NSString *localModelFilePath =
-    [[NSBundle mainBundle] pathForResource:FIRAutoMLLocalModelManifestFilename
-                                    ofType:FIRAutoMLManifestFileType];
-    FIRLocalModel *localModel = [[FIRLocalModel alloc] initWithName:FIRLocalAutoMLModelName
-                                                               path:localModelFilePath];
-    if (![_modelManager registerLocalModel:localModel]) {
-        NSLog(@"Failed to register AutoML local model");
-    }
-    self.areAutoMLModelsRegistered = YES;
-}
-
-#pragma mark - Notifications
-
-- (void)remoteModelDownloadDidSucceed:(NSNotification *)notification {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.downloadProgressView.hidden = YES;
-        FIRRemoteModel *remotemodel = notification.userInfo[FIRModelDownloadUserInfoKeyRemoteModel];
-        if (remotemodel == nil) {
-            [self.resultsText appendString:@"firebaseMLModelDownloadDidSucceed notification posted without a RemoteModel instance."];
-            return;
-        }
-        [self.resultsText appendFormat:@"Successfully downloaded the remote model with name: %@. The model is ready for detection.", remotemodel.name];
-    });
-}
-
-- (void)remoteModelDownloadDidFail:(NSNotification *)notification {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.downloadProgressView.hidden = YES;
-        FIRRemoteModel *remoteModel = notification.userInfo[FIRModelDownloadUserInfoKeyRemoteModel];
-        NSError *error = notification.userInfo[FIRModelDownloadUserInfoKeyError];
-        if (error == nil) {
-            [self.resultsText appendString:@"firebaseMLModelDownloadDidFail notification posted without a RemoteModel instance or error."];
-            return;
-        }
-        [self.resultsText appendFormat:@"Failed to download the remote model with name: %@, error: %@.", remoteModel, error.localizedDescription];
-    });
 }
 
 NS_ASSUME_NONNULL_END
@@ -526,8 +403,6 @@ NS_ASSUME_NONNULL_END
         NSLog(@"Couldn't find file!");
     }
     
-    
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
     query.limit = 10001;
     [query orderByAscending:@"image"];
@@ -560,5 +435,3 @@ NS_ASSUME_NONNULL_END
 }
 
 @end
-
-

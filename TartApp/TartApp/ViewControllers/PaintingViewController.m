@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.testLabel.text = self.resultsArray[0];
+   // self.testLabel.text = self.resultsArray[0];
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
@@ -39,10 +39,10 @@
     
     [self fetchFromKey:@"labels"];
     [self fetchFromKey:@"objects"];
-    [self fetchFromKey:@"Origin"];
-    [self fetchFromKey:@"Maker"];
-    [self fetchFromKey:@"Title"];
-    [self fetchFromKey:@"Type"];
+    [self fetchFromStringKey:@"Origin"];
+    [self fetchFromStringKey:@"Maker"];
+    [self fetchFromStringKey:@"Title"];
+    [self fetchFromStringKey:@"Type"];
    // [self initCollectionView];
 }
 
@@ -57,7 +57,41 @@
     
     
     [query whereKey:key containsAllObjectsInArray:arr];
-    //query.limit = 20;
+
+    query.limit = 1000;
+    
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            // do something with the array of object returned by the call
+            if (posts.count != 0) {
+                [self->totalArr addObjectsFromArray:posts];
+                self.paintingsArray = [NSArray arrayWithArray:self->totalArr];
+                
+                [self.collectionView reloadData];
+            } else {
+
+            }
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+    
+}
+
+- (void)fetchFromStringKey:(NSString *)key {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Paintings"];
+    
+    query.limit = 1000;
+    
+    // this gets objects with EXACTLY what is written down
+    // must change later
+    
+    NSMutableString *regexStr = [NSMutableString stringWithString:@"^"];;
+    [regexStr appendString:self.resultsArray[0]];
+    
+    [query whereKey:key matchesRegex:regexStr modifiers:@"i"];
 
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
