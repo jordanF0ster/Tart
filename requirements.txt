@@ -40,7 +40,7 @@ ipaddress==1.0.22
 ipykernel==4.9.0
 ipython==5.8.0
 ipywidgets==7.4.2
-Jinja2==2.10
+Jinja2==2.11.3
 jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.3
