@@ -116,7 +116,7 @@ pytz==2013.7
 pyzmq==17.1.2
 qtconsole==4.4.1
 requests==2.22.0
-rsa==4.0
+rsa==4.1
 scandir==1.9.0
 scikit-learn==0.19.2
 scipy==0.13.0b1
