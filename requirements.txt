@@ -38,7 +38,7 @@ httplib2==0.13.1
 idna==2.8
 ipaddress==1.0.22
 ipykernel==4.9.0
-ipython==5.8.0
+ipython==7.16.3
 ipywidgets==7.4.2
 Jinja2==2.10
 jsonschema==2.6.0
